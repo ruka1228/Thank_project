@@ -10,3 +10,7 @@ SELECT * FROM TASK LOGIN EMPLOYEE_NUMBER [42000-175]
 org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM TASK LOLOGIN IN[*] EMPLOYEE_NUMBER"
 Syntax error in SQL statement "SELECT * FROM TASK LOLOGIN IN[*] EMPLOYEE_NUMBER"; SQL statement:
 SELECT * FROM TASK LOLOGIN IN EMPLOYEE_NUMBER [42000-175]
+05-25 13:37:25 jdbc[66]: exception
+org.h2.jdbc.JdbcSQLException: テーブル "SECTION" が見つかりません
+Table "SECTION" not found; SQL statement:
+SELECT * FROM SECTION [42102-175]
