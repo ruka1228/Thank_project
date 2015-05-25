@@ -88,9 +88,13 @@ public class Application extends Controller {
     public static Result search(){
     	return TODO;
     }
-
     public static Result count(){
     	return TODO;
     }
+    public static Result test(){
+    	return TODO;
+    }
+
+
 
    }
