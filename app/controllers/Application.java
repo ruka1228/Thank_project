@@ -48,11 +48,21 @@ public class Application extends Controller {
     }
 
     public static Result addUser(){
-    	return TODO;
+    	User newUser = Form.form(User.class).bindFromRequest().get();
+    	newUser.save();
+        return redirect(routes.Application.login());
+    }
+
+    public static Result addPost(){
+    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
+    	newDepartment.save();
+        return redirect(routes.Application.login());
     }
 
     public static Result addClass(){
-    	return TODO;
+    	Section newSection = Form.form(Section.class).bindFromRequest().get();
+    	newSection.save();
+        return redirect(routes.Application.login());
     }
 
     public static Result check(){
