@@ -92,5 +92,7 @@ public class Application extends Controller {
     public static Result count(){
     	return TODO;
     }
-
+    public static Result test(){
+    	return TODO;
+    }
    }
