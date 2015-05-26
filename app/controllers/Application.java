@@ -15,6 +15,11 @@ public class Application extends Controller {
     	return ok(login.render());
     }
 
+    public static Result staffMenu(){
+        //Finder<Integer, Permisson> finder = new Finder<Integer, Parent>(Integer.class,Permission.class);
+    	return ok(staffMenu());
+    }
+
     public static Result adminMenu(){
     	return ok(adminMenu.render());
     }
