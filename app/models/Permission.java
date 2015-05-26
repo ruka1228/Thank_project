@@ -6,8 +6,9 @@ import javax.persistence.Id;
 
 @Entity
 public class Permission extends Model {
-	@Id//←ここでIDを主キーに設定している
-    public Integer permission_id;
 
-    public String permission_name;
+	@Id//←ここでIDを主キーに設定している
+    public Integer permission_id; //権限ID
+
+    public String permission_name; //権限名
 }
