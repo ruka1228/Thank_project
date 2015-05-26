@@ -12,39 +12,39 @@ public class Application extends Controller {
     }
 
     public static Result login(){
-    	return TODO;
+    	return ok(login.render());
     }
 
     public static Result adminMenu(){
-    	return TODO;
+    	return ok(adminMenu.render());
     }
 
     public static Result thanksEntry(){
-    	return TODO;
+    	return ok(thanksEntry.render());
     }
 
     public static Result boardList(){
-    	return TODO;
+    	return ok(boardList.render());
     }
 
     public static Result board(){
-    	return TODO;
+    	return ok(board.render());
     }
 
     public static Result send(){
-    	return TODO;
+    	return ok(send.render());
     }
 
     public static Result receive(){
-    	return TODO;
+    	return ok(receive.render());
     }
 
     public static Result userManage(){
-    	return TODO;
+    	return ok(useManage.render());
     }
 
     public static Result postManage(){
-    	return TODO;
+    	return ok(postManage.render());
     }
 
     public static Result addUser(){
@@ -66,33 +66,33 @@ public class Application extends Controller {
     }
 
     public static Result check(){
-    	return TODO;
+    	return ok(check.render());
     }
 
     public static Result deleteUser(){
-    	return TODO;
+    	return ok(deleteUser.render());
     }
 
     public static Result deletePost(){
-    	return TODO;
+    	return ok(deletePost.render());
     }
 
     public static Result deleteClass(){
-    	return TODO;
+    	return ok(deleteClass.render());
     }
 
     public static Result vote(){
-    	return TODO;
+    	return ok(vote.render());
     }
 
     public static Result search(){
-    	return TODO;
+    	return ok(search.render());
     }
     public static Result count(){
-    	return TODO;
+    	return ok(count.render());
     }
     public static Result test(){
-    	return TODO;
+    	return ok(login.render());
     }
 
 
