@@ -12,87 +12,91 @@ public class Application extends Controller {
     }
 
     public static Result login(){
-    	return TODO;
+    	return ok(login.render());
+    }
+
+    public static Result staffMenu(){
+    	return ok(staffMenu.render());
     }
 
     public static Result adminMenu(){
-    	return TODO;
+    	return ok(adminMenu.render());
     }
 
     public static Result thanksEntry(){
-    	return TODO;
+    	return ok(thanksEntry.render());
     }
 
     public static Result boardList(){
-    	return TODO;
+    	return ok(boardList.render());
     }
 
     public static Result board(){
-    	return TODO;
+    	return ok(board.render());
     }
 
     public static Result send(){
-    	return TODO;
+    	return ok(send.render());
     }
 
     public static Result receive(){
-    	return TODO;
+    	return ok(receive.render());
     }
 
     public static Result userManage(){
-    	return TODO;
+    	return ok(userManage.render());
     }
 
     public static Result postManage(){
-    	return TODO;
+    	return ok(postManage.render());
     }
 
-    public static Result addUser(){
-    	User newUser = Form.form(User.class).bindFromRequest().get();
-    	newUser.save();
-        return redirect(routes.Application.login());
-    }
+//    public static Result addUser(){
+//    	User newUser = Form.form(User.class).bindFromRequest().get();
+//    	newUser.save();
+//        return redirect(routes.Application.login());
+//    }
 
-    public static Result addPost(){
-    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
-    	newDepartment.save();
-        return redirect(routes.Application.login());
-    }
-
-    public static Result addClass(){
-    	Section newSection = Form.form(Section.class).bindFromRequest().get();
-    	newSection.save();
-        return redirect(routes.Application.login());
-    }
-
-    public static Result check(){
-    	return TODO;
-    }
-
+//    public static Result addPost(){
+//    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
+//    	newDepartment.save();
+//        return redirect(routes.Application.login());
+//    }
+//
+//    public static Result addClass(){
+//    	Section newSection = Form.form(Section.class).bindFromRequest().get();
+//    	newSection.save();
+//        return redirect(routes.Application.login());
+//    }
+//
+//    public static Result check(){
+//    	return TODO;
+//    }
+//
     public static Result deleteUser(){
-    	return TODO;
+    	return ok(deleteUser.render());
     }
 
     public static Result deletePost(){
-    	return TODO;
+    	return ok(deletePost.render());
     }
 
     public static Result deleteClass(){
-    	return TODO;
+    	return ok(deleteClass.render());
     }
 
     public static Result vote(){
-    	return TODO;
+    	return ok(vote.render());
     }
 
-    public static Result search(){
-    	return TODO;
+    public static Result serch(){
+    	return ok(serch.render());
     }
     public static Result count(){
-    	return TODO;
+    	return ok(count.render());
     }
-    public static Result test(){
-    	return TODO;
+    public static Result check(){
+    	return ok(check.render());
     }
 
 
