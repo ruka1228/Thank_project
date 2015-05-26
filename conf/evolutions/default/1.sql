@@ -39,6 +39,14 @@ create table thankyou (
   constraint pk_thankyou primary key (thankyou_id))
 ;
 
+create table user (
+  empoyee_id                integer not null,
+  name                      varchar(255),
+  permission_id             integer,
+  vote_id                   integer,
+  constraint pk_user primary key (empoyee_id))
+;
+
 create sequence depertment_seq;
 
 create sequence login_seq;
@@ -48,6 +56,8 @@ create sequence permission_seq;
 create sequence section_seq;
 
 create sequence thankyou_seq;
+
+create sequence user_seq;
 
 
 
@@ -66,6 +76,8 @@ drop table if exists section;
 
 drop table if exists thankyou;
 
+drop table if exists user;
+
 SET REFERENTIAL_INTEGRITY TRUE;
 
 drop sequence if exists depertment_seq;
@@ -77,4 +89,6 @@ drop sequence if exists permission_seq;
 drop sequence if exists section_seq;
 
 drop sequence if exists thankyou_seq;
+
+drop sequence if exists user_seq;
 
