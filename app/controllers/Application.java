@@ -55,6 +55,16 @@ public class Application extends Controller {
     	return ok(postManage.render());
     }
 
+    public static Result addUser(){
+    return ok(addUser.render());
+    }
+
+    public static Result userPlus(){
+        User newUser = Form.form(User.class).bindFromRequest().get();
+           newUser.save();
+           return redirect(routes.Application.Login());
+   }
+
 //    public static Result addPost(){
 //    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
 //    	newDepartment.save();
