@@ -11,4 +11,6 @@ public class Login extends Model {
     public Integer id; //ログインID
 
     public String name; //パスワード
+
+    public Integer employee_id;//社員ID
 }
