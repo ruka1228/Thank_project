@@ -1,3 +1,6 @@
+@(thankscardID:String,class:String,
+  content:String,date:Integer,post:String,
+  vote:Integer)
 <html>
 <head>
 <title>掲示板詳細画面</title>
@@ -6,10 +9,10 @@
 
 <div align="center"><h1>掲示板詳細<h1></div>
 <div align="center"><table border=1></div>
-  <tr><th>感謝カードID:</th>　<th>種別:</th>　
-  <tr><td colspan=1>内容:</td></tr>
-　<tr><td>日付:</td><td>部署</td></tr>
-  <tr><td>投票数</td></tr>
+  <tr><th>感謝カードID:thankscardID</th><th>種別:@class</th>
+  <tr><td colspan=1>内容:content</td></tr>
+  <tr><td>日付:@date</td><td>部署:@post</td></tr>
+  <tr><td>投票数:@vote</td></tr>
 
 
 <td align="left" valign="bottom">
