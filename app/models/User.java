@@ -6,6 +6,11 @@ import javax.persistence.Id;
 
 @Entity
 public class user extends Model {
+	@OneToMany
+	public List<Login> login;
+	@ManyToOne
+	public List<Permission> permission;
+
 	@Id//←ここでIDを主キーに設定している
     public Integer empoyee_id;//社員ID
 

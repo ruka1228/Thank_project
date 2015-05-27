@@ -7,6 +7,9 @@ import play.db.ebean.Model;
 
 @Entity
 public class Login extends Model {
+	@ManyToOne
+	public List<User> users;
+
 	@Id
     public Integer id; //ログインID
 

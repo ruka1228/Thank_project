@@ -7,6 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Depertment extends Model {
+	@OneToMany
+	public List<Thankyou> Thanks;
 
 	@Id//←ここでIDを主キーに設定している
     public Integer department_id; //部署ID

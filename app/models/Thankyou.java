@@ -12,6 +12,12 @@ public class Thankyou extends Model {
 	@ManyToOne
 	public List<User> users;
 
+	@ManyToOne
+	public List<Section> sections;
+
+	@ManyToOne
+	public List<Depertment> posts;
+
 	@Id
     public Integer thankyou_id; //感謝カードID
 
@@ -22,6 +28,8 @@ public class Thankyou extends Model {
     public String you_name; //相手の氏名
 
     public String employee_number; //社員ID
+
+    public Integer post_id; //部署ID
 
     public Integer vote_number; //投票数
 
