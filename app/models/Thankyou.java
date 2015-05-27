@@ -29,7 +29,7 @@ public class Thankyou extends Model {
 
     public String employee_number; //社員ID
 
-    public Integer post_id;
+    public Integer post_id; //部署ID
 
     public Integer vote_number; //投票数
 
