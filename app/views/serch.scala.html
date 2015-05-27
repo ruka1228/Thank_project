@@ -1,61 +1,50 @@
-@(post:String,class:String,year:Integer,month:Integer,votes:Integer,data:Integer,
-thankscardID:Integer,date:Integer)
 <HEAD>
-
 </HEAD>
 <body>
-
-
 <h1>掲示板検索</h1>
-<br>
+</br>
 <form>
-部署@post
-
-
+部署
 <select>
 <option>
 </option>
 </select>
 </form>
-<br>
+</br>
 
-
-種別@class
+種別
+<select>
+<option>
+</option>
+</select>
+</br>
+日付(年)
+<select>
+<option>
+</option>
+</select>
+</br>
+日付(月)
 <select>
 <option>
 </option>
 </select>
 </br>
 
-
-日付(年)@year
-<select>
-<option>
-</option>
-</select>
-<br>
-日付(月)@month
+得票数
 <select>
 <option>
 </option>
 </select>
 </br>
 
-
-得票数@votes
-<select>
-<option>
-</option>
-</select>
+ :件のデータがあります。
 <br>
+感謝カードID：
+種別：
+日付：
+</br>
+<input type="button" value="詳細"></br>
+<input type="button" value="検索">
 
-<label>@data :件のデータがあります。
-<br>
-
-感謝カードID：@thankscardID
-
-種別：@class
-
-日付：@date
-</label>
-<input type="button" value="詳細">
+</body>

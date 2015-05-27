@@ -3,7 +3,28 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
-GET     /							controllers.Application.login()
+GET     /                                controllers.Application.index()
+GET     /login                           controllers.Application.login()
+GET     /staffMenu                       controllers.Application.staffMenu()
+GET     /adminMenu                       controllers.Application.adminMenu()
+GET     /thanksEntry                     controllers.Application.thanksEntry()
+GET     /boardList                       controllers.Application.boardList()
+GET     /board                           controllers.Application.board()
+GET     /send                           controllers.Application.send()
+GET     /receive                           controllers.Application.receive()
+GET     /userManage                           controllers.Application.userManage()
+GET     /postManage                           controllers.Application.postManage()
+#POST    /addUser                          controllers.Application.addUser()
+#POST    /addPost                           controllers.Application.addPost()
+#POST    /addClass                           controllers.Application.addClass()
+#POST    /addcheck                           controllers.Application.addcheck()
+GET     /deleteUser                           controllers.Application.deleteUser()
+GET     /deletePost                           controllers.Application.deletePost()
+GET     /deleteClass                           controllers.Application.deleteClass()
+GET     /vote                           controllers.Application.vote()
+GET     /search                           controllers.Application.serch()
+GET     /count                           controllers.Application.count()
+GET     /check                           controllers.Application.check()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
