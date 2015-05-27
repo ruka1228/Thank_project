@@ -16,7 +16,6 @@ public class Application extends Controller {
     }
 
     public static Result staffMenu(){
-        //Finder<Integer, Permisson> finder = new Finder<Integer, Parent>(Integer.class,Permission.class);
     	return ok(staffMenu.render());
     }
 
@@ -29,7 +28,10 @@ public class Application extends Controller {
     }
 
     public static Result boardList(){
-    	return ok(boardList.render());
+        Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class,
+                Thankyou.class);
+        List<Thankyou> Thankyou = finder.all();
+    	return ok(boardList.render(Thankyou.thankyou_id,Thankyou.section_id,Thankyou.help_contents,Thankyou.date,));
     }
 
     public static Result board(){
@@ -93,5 +95,6 @@ public class Application extends Controller {
     }
     public static Result check(){
     	return ok(check.render());
+    }
 
    }
