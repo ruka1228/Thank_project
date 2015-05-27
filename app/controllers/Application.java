@@ -17,7 +17,7 @@ public class Application extends Controller {
 
     public static Result staffMenu(){
         //Finder<Integer, Permisson> finder = new Finder<Integer, Parent>(Integer.class,Permission.class);
-    	return ok(staffMenu());
+    	return ok(staffMenu.render());
     }
 
     public static Result adminMenu(){
@@ -46,34 +46,29 @@ public class Application extends Controller {
 
     public static Result userManage(){
     	return ok(useManage.render());
+    	return ok(userManage.render());
     }
 
     public static Result postManage(){
     	return ok(postManage.render());
     }
 
-    public static Result addUser(){
-    	User newUser = Form.form(User.class).bindFromRequest().get();
-    	newUser.save();
-        return redirect(routes.Application.login());
-    }
-
-    public static Result addPost(){
-    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
-    	newDepartment.save();
-        return redirect(routes.Application.login());
-    }
-
-    public static Result addClass(){
-    	Section newSection = Form.form(Section.class).bindFromRequest().get();
-    	newSection.save();
-        return redirect(routes.Application.login());
-    }
-
-    public static Result check(){
-    	return ok(check.render());
-    }
-
+//    public static Result addPost(){
+//    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
+//    	newDepartment.save();
+//        return redirect(routes.Application.login());
+//    }
+//
+//    public static Result addClass(){
+//    	Section newSection = Form.form(Section.class).bindFromRequest().get();
+//    	newSection.save();
+//        return redirect(routes.Application.login());
+//    }
+//
+//    public static Result check(){
+//    	return TODO;
+//    }
+//
     public static Result deleteUser(){
     	return ok(deleteUser.render());
     }
@@ -96,10 +91,7 @@ public class Application extends Controller {
     public static Result count(){
     	return ok(count.render());
     }
-    public static Result test(){
-    	return ok(login.render());
-    }
-
-
+    public static Result check(){
+    	return ok(check.render());
 
    }
