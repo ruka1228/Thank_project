@@ -3,8 +3,14 @@
 # ~~~~
 
 # Home page
-GET     /                                controllers.Application.index()
-GET     /login                           controllers.Application.login()
+#GET     /                                controllers.Application.index()
+GET     /login       controllers.Authentication.index()
+POST    /login       controllers.Authentication.authenticate()
+GET     /logout      controllers.Authentication.logout()
+GET     /users            controllers.Users.index()
+GET     /users/new        controllers.Users.newUser()
+POST    /users            controllers.Users.createUser()
+
 GET     /staffMenu                       controllers.Application.staffMenu()
 GET     /adminMenu                       controllers.Application.adminMenu()
 GET     /thanksEntry                     controllers.Application.thanksEntry()
@@ -22,7 +28,7 @@ GET     /deleteUser                           controllers.Application.deleteUser
 GET     /deletePost                           controllers.Application.deletePost()
 GET     /deleteClass                           controllers.Application.deleteClass()
 GET     /vote                           controllers.Application.vote()
-GET     /search                           controllers.Application.serch()
+GET     /search                           controllers.Application.search()
 GET     /count                           controllers.Application.count()
 GET     /check                           controllers.Application.check()
 
