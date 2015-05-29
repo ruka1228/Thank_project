@@ -9,8 +9,9 @@
 <div align="center"><table border=1></div>
 
    @for(Thankyou <- thanklist) {
-	<tr><th>感謝カードID:@thankyou_id</th><th>種別:@section_id</th><th>日付:@date</th>
- 	<tr><td colspan=1>内容:@help_contents</td><td><button>詳細</button></td></tr>
+	<tr><th>感謝カードID:@Thankyou.Thankyou_id</th><th>種別:@Thankyou.section_id</th><th>日付:@Thankyou.date</th>
+ 	<tr><td colspan=1>内容:@Thankyou.help_contents</td><td>
+ 	<button>詳細</button></td></tr>
 	}
 
 <td align="right" valign="bottom">

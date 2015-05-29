@@ -6,7 +6,6 @@ import play.mvc.*;
 import views.html.*;
 
 public class Application extends Controller {
-    public static Form<Thankyou> ThankyouForm = Form.form(Thankyou.class);
 
     public static Result staffMenu(){
     	return ok(staffMenu.render());
@@ -28,14 +27,13 @@ public class Application extends Controller {
     public static Result board(){
 
     	}
-    }
+
 
     public static Result boardselect(){
     	if(Thankyou.thankyou_id==0){
     		return redirect(routes.Application.boardList());
     	}else{
-        Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class,
-                Thankyou.class);
+        Finder<Integer,Thankyou> finder = new Finder<Integer,Thankyou>(Integer.class,Thankyou.class);
         Thankyou<Thankyou> thankyou=finder.byId(new Integer(Thankyou.thankyou_id));
     	return ok(board.render(thankyou);
     	}
@@ -108,6 +106,5 @@ public class Application extends Controller {
     public static Result check(){
     	return ok(check.render());
     }
-
-   }
+}
 
