@@ -12,6 +12,7 @@ create table depertment (
 create table login (
   id                        integer not null,
   name                      varchar(255),
+  employee_id               integer,
   constraint pk_login primary key (id))
 ;
 
@@ -40,11 +41,10 @@ create table thankyou (
 ;
 
 create table user (
-  empoyee_id                integer not null,
+  id                        bigint not null,
   name                      varchar(255),
-  permission_id             integer,
-  vote_id                   integer,
-  constraint pk_user primary key (empoyee_id))
+  password                  varchar(255),
+  constraint pk_user primary key (id))
 ;
 
 create sequence depertment_seq;

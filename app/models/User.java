@@ -1,22 +1,49 @@
 package models;
 
+import javax.persistence.*;
 import play.db.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
-public class user extends Model {
+public class User extends Model {
+
 	@OneToMany
 	public List<Login> login;
 	@ManyToOne
 	public List<Permission> permission;
+    @Id
+    public Long id;
 
-	@Id//←ここでIDを主キーに設定している
-    public Integer empoyee_id;//社員ID
+    public String name;
 
-    public String name;//社員の名前
+    public String password;
 
-    public Integer permission_id;//権限
+    public static Finder<Long, User> find = new Finder<Long,User>(Long.class, User.class);
 
-    public Integer vote_id;//投票の持ち点
+    /**
+     * <code>
+     * if (User.create("gongo", "pizza")) {
+     *     System.out.println("認証成功!!");
+     * } else {
+     *     System.out.println("認証失敗...");
+     * }
+     * </code>
+     *
+     * @param username ユーザ名
+     * @param password パスワード
+     * @return ユーザ名 & パスワードのセットが正しければ true
+     */
+
+    public static Boolean authenticate(String name, String password) {
+        User user = find.where().eq("name", name).findUnique();
+        return (user != null && user.password.equals(password));
+    }
+
+    public static Long create(String name, String password) {
+        User user = new User();
+        user.name = name;
+        user.password = password;
+        user.save();
+
+        return user.id;
+    }
 }

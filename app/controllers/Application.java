@@ -7,13 +7,13 @@ import views.html.*;
 
 public class Application extends Controller {
 
-    public static Result index() {
-        return ok(index.render("Your new application is ready."));
-    }
+//    public static Result index() {
+//        return ok(index.render("Your new application is ready."));
+//    }
 
-    public static Result login(){
-    	return ok(login.render());
-    }
+//    public static Result login(){
+//    	return ok(login.render());
+//    }
 
     public static Result staffMenu(){
     	return ok(staffMenu.render());
@@ -47,7 +47,6 @@ public class Application extends Controller {
     }
 
     public static Result userManage(){
-    	return ok(useManage.render());
     	return ok(userManage.render());
     }
 
@@ -108,3 +107,4 @@ public class Application extends Controller {
     }
 
    }
+}
