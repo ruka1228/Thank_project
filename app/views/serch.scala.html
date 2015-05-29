@@ -1,0 +1,48 @@
+@(year:Date,month:Date,votes:Integer,data:Integer,thankscardID:Integer,class:String,date:Date)
+<HTML>
+<HEAD>
+</HEAD>
+<body>
+<h1>掲示板検索</h1>
+</br>
+<form>
+
+日付(年)@year
+<select>
+<option>
+</option>
+</select>
+</br>
+
+日付(月)@month
+<select>
+<option>
+</option>
+</select>
+</br>
+
+得票数@votes
+<select>
+<option>
+</option>
+</select>
+</br>
+
+<label>@data :件のデータがあります。
+</br>
+
+感謝カードID：@thankscardID
+
+種別：@class
+
+日付：@date
+</label>
+<input type="button" value="詳細">
+ @data:件のデータがあります。
+</br>
+
+<input type="button" value="詳細"></br>
+<input type="button" value="検索">
+<a href="@routes.Application.staffMenu()"><input type="button" value="メニューに戻る"></a>
+</body>
+</HTML>

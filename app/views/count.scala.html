@@ -1,4 +1,5 @@
-
+@(employeeID:Integer,year:Date,month:Date,help:Integer,vote:Integer,thankscardID:Integer,class:String,date:Date,content:String)
+<HTML>
 
 <head>
 
@@ -9,7 +10,7 @@
 
 <br>
 <form>
-社員ID
+社員ID@employeeID
 <select>
 
 <option>
@@ -18,7 +19,7 @@
 </form>
 
 <br>
-日付(年)
+日付(年)@year
 <select>
 
 <option>
@@ -27,7 +28,7 @@
 </form>
 
 <br>
-日付(月)
+日付(月)@month
 <select>
 <option>
 </option>
@@ -35,22 +36,26 @@
 </form>
 
 <br>
-ヘルプ数：
+ヘルプ数：@help
 
 <br>
-投票数：<br>
+投票数：<br>@vote
 
 
 
 
 <br>
-感謝カードID：
+感謝カードID：@thankscardID
 <br>
-種別:
+種別:@help
 <br>
-日付:
+日付:@date
 <br>
-内容:<br>
+内容:<br>@content
+
 
 
 <input type="button" value="詳細">
+<a href="@routes.Application.adminMenu()"><input type="button" value="メニューに戻る"></a>
+</body>
+</HTML>

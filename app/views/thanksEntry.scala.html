@@ -1,3 +1,6 @@
+@(year:Date,month:Date,date:Date,helperName:String,helpClass:String,post:String,helpContent:String)
+
+<HTML>
 
 <head>
 </head>
@@ -5,7 +8,7 @@
 
   <h1>感謝カード入力画面</h1>
 <form>
-年
+年@year
 <select>
 <option>
 </option>
@@ -14,7 +17,7 @@
 
 
 <form>
-月month
+月@month
   <select>
        　
 <option>
@@ -22,20 +25,20 @@
     </select>
 </form>
 
-日date
+日@date
 <select>
 <option>
 </option>
 </select>
 </form>
 <br>
-<label>相手の氏名helperName
+<label>相手の氏名@helperName
 <input type="text" name="相手の氏名"　value="" 　>
 
 
 <br>
 <form>
-ヘルプ種別helpClass
+ヘルプ種別@helpClass
 <select>
 
 
@@ -47,7 +50,7 @@
 
 <br>
 <form>
-部署post
+部署@post
 <select>
 
 <option>
@@ -58,7 +61,7 @@
 </form>
 <br>
 
-<td>ヘルプ内容</td>helpContent
+<td>ヘルプ内容</td>@helpContent
 <br>
 <td><textarea rows="7" cols="55" name="message">
 </textarea></td>
@@ -71,6 +74,7 @@
 <td colspan="2">
 <input type="submit" value="送信">
 <input type="reset" value="クリア">
-<input type="button" value="メニューに戻る">
+<a href="@routes.Application.staffMenu()"><input type="button" value="メニューに戻る"></a>
 </body>
 
+</HTML>

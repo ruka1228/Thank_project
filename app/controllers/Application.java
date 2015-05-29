@@ -7,16 +7,15 @@ import views.html.*;
 
 public class Application extends Controller {
 
-//    public static Result index() {
-//        return ok(index.render("Your new application is ready."));
-//    }
+    public static Result index() {
+        return ok(index.render("Your new application is ready."));
+    }
 
-//    public static Result login(){
-//    	return ok(login.render());
-//    }
+    public static Result login(){
+    	return ok(login.render());
+    }
 
     public static Result staffMenu(){
-        //Finder<Integer, Permisson> finder = new Finder<Integer, Parent>(Integer.class,Permission.class);
     	return ok(staffMenu.render());
     }
 
@@ -29,7 +28,10 @@ public class Application extends Controller {
     }
 
     public static Result boardList(){
-    	return ok(boardList.render());
+        Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class,
+                Thankyou.class);
+        List<Thankyou> Thankyou = finder.all();
+    	return ok(boardList.render("Thankyou.thankyou_id","Thankyou.section_id","Thankyou.help_contents","Thankyou.date","Thankyou.post_id","Thankyou.vote_number"));
     }
 
     public static Result board(){
@@ -45,12 +47,23 @@ public class Application extends Controller {
     }
 
     public static Result userManage(){
+    	return ok(useManage.render());
     	return ok(userManage.render());
     }
 
     public static Result postManage(){
     	return ok(postManage.render());
     }
+
+    public static Result addUser(){
+    return ok(addUser.render());
+    }
+
+    public static Result userPlus(){
+        User newUser = Form.form(User.class).bindFromRequest().get();
+           newUser.save();
+           return redirect(routes.Application.Login());
+   }
 
 //    public static Result addPost(){
 //    	Department newDepartment = Form.form(Department.class).bindFromRequest().get();
@@ -92,6 +105,6 @@ public class Application extends Controller {
     }
     public static Result check(){
     	return ok(check.render());
+    }
 
    }
-}

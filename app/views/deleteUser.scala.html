@@ -1,22 +1,30 @@
+@(employeeID:Integer,employeeName:String)
+<HTML>
 <head>
 </head>
+<body>
 <h1>ユーザー削除画面</h1>
 <br>
 <th>
 
-社員ID
+社員ID@employeeID
 </th>
 <td>
 <input type="text" name="user_id" value="">
 </td>
 </tr>
 <th>
-<br15:53 2015/05/2515:53 2015/05/25>
-社員名
+<br>
+社員名@employeeName
 </th>
 <td>
 <input type="text" name="syain_name" value="">
 
 <br>
 <input type="reset" value="削除">
-<input type="button" value="メニューに戻る">
+<a href="@routes.Application.adminMenu()"><input type="button" value="メニューに戻る"></a>
+</td>
+</body>
+
+</HTML>
+

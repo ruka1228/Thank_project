@@ -1,3 +1,4 @@
+@(thankscardID:String,class:String,date:integer,content:String)
 <html>
 <head>
 <title>送信箱</title>
@@ -8,11 +9,11 @@
 <div align="center"><tr><th>○件のデータがあります。</th></div>
 
 <div align="center"><table border=1></div>
-  <tr><th>感謝カードID:</th>　<th>種別:</th>　<th>日付:</th>
-  <tr><th colspan=1>内容:<button>詳細</button></th>
+  <tr><th>感謝カードID:@thankscardID</th><th>種別:@class</th><th>日付:@date</th>
+  <tr><th colspan=1>内容:@content<button>詳細</button></th>
 
   <td align="left" valign="bottom">
-   <button>メニュー<br>戻る</button></td>
+   <a href="@routes.Application.staffMenu()"><button>メニュー<br>戻る</button></a></td>
 </table>
 </tr>
 
