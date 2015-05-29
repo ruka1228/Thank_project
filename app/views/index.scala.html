@@ -16,10 +16,11 @@
         }
 
         @form(routes.Authentication.authenticate()) {
-            @inputText(loginForm("name"))
-            @inputPassword(loginForm("password"))
+            @inputText(loginForm("name"), '_label -> "名前")
+            @inputPassword(loginForm("password"), '_label -> "パスワード")
 
             <input type="submit" value="ログイン">
         }
+
     </body>
 </html>

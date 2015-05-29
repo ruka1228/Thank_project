@@ -1,8 +1,3 @@
-@(year:Integer,month:Integer,date:Integer,
-helperName:String,helpClass:String,post:String,
-helpContent:String)
-
-
 
 <head>
 </head>
@@ -10,7 +5,7 @@ helpContent:String)
 
   <h1>感謝カード入力画面</h1>
 <form>
-年@year
+年
 <select>
 <option>
 </option>
@@ -19,7 +14,7 @@ helpContent:String)
 
 
 <form>
-月@month
+月month
   <select>
        　
 <option>
@@ -27,20 +22,20 @@ helpContent:String)
     </select>
 </form>
 
-日@date
+日date
 <select>
 <option>
 </option>
 </select>
 </form>
 <br>
-<label>相手の氏名@helperName
+<label>相手の氏名helperName
 <input type="text" name="相手の氏名"　value="" 　>
 
 
 <br>
 <form>
-ヘルプ種別@helpClass
+ヘルプ種別helpClass
 <select>
 
 
@@ -52,7 +47,7 @@ helpContent:String)
 
 <br>
 <form>
-部署@post
+部署post
 <select>
 
 <option>
@@ -63,7 +58,7 @@ helpContent:String)
 </form>
 <br>
 
-<td>ヘルプ内容</td>@helpContent
+<td>ヘルプ内容</td>helpContent
 <br>
 <td><textarea rows="7" cols="55" name="message">
 </textarea></td>

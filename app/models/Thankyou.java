@@ -9,8 +9,8 @@ import play.db.ebean.Model;
 @Entity
 public class Thankyou extends Model {
 
-	@ManyToOne
-	public List<User> users;
+//	@ManyToOne
+//	public List<User> users;
 
 	@Id
     public Integer thankyou_id; //感謝カードID
