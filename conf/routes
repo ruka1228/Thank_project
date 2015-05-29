@@ -8,7 +8,7 @@ GET     /login       controllers.Authentication.index()
 POST    /login       controllers.Authentication.authenticate()
 GET     /logout      controllers.Authentication.logout()
 GET     /users            controllers.Users.index()
-GET     /users/new        controllers.Users.newUser()
+#GET     /users/new        controllers.Users.newUser()
 POST    /users            controllers.Users.createUser()
 
 GET     /staffMenu                       controllers.Application.staffMenu()

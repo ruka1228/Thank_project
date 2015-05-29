@@ -49,8 +49,8 @@ public class Authentication extends Controller {
         } else {
             Login login = form.get();
             session("login", login.name);
-            //return ok(adminMenu.render());
-            return ok("ようこそ " + login.name + " さん!!");
+            return ok(adminMenu.render());
+            //return ok("ようこそ " + login.name + " さん!!");
         }
     }
 }
