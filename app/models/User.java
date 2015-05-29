@@ -5,11 +5,6 @@ import play.db.ebean.Model;
 
 @Entity
 public class User extends Model {
-
-	@OneToMany
-	public List<Login> login;
-	@ManyToOne
-	public List<Permission> permission;
     @Id
     public Long id;
 
