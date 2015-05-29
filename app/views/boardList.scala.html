@@ -1,4 +1,4 @@
-@(thankscardID:String,class:String,date:integer,content:String)
+@(thanklist:List[Thankyou])
 <html>
 <head>
 <title>掲示板画面</title>
@@ -7,8 +7,11 @@
 
 <div align="center"><h1>掲示板<h1></div>
 <div align="center"><table border=1></div>
-  <tr><th>感謝カードID:@thankscardID</th><th>種別:@class</th><th>日付:@date</th>
-  <tr><td colspan=1>内容:@content</td><td><button>詳細</button></td></tr>
+
+   @for(Thankyou <- thanklist) {
+	<tr><th>感謝カードID:@thankyou_id</th><th>種別:@section_id</th><th>日付:@date</th>
+ 	<tr><td colspan=1>内容:@help_contents</td><td><button>詳細</button></td></tr>
+	}
 
 <td align="right" valign="bottom">
  <button>最新</button>
