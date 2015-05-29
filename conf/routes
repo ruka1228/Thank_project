@@ -3,8 +3,14 @@
 # ~~~~
 
 # Home page
-GET     /                                controllers.Application.index()
-GET     /login                           controllers.Application.login()
+
+GET     /login       controllers.Authentication.index()
+POST    /login       controllers.Authentication.authenticate()
+GET     /logout      controllers.Authentication.logout()
+GET     /users            controllers.Users.index()
+GET     /users/new        controllers.Users.newUser()
+#POST    /users            controllers.Users.createUser()
+#POST	/board       controllers.Authentication.boardselect()
 GET     /staffMenu                       controllers.Application.staffMenu()
 GET     /adminMenu                       controllers.Application.adminMenu()
 GET     /thanksEntry                     controllers.Application.thanksEntry()
