@@ -105,6 +105,4 @@ public class Application extends Controller {
     public static Result check(){
     	return ok(check.render());
     }
-
-   }
 }
