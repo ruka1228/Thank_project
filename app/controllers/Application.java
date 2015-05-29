@@ -30,8 +30,8 @@ public class Application extends Controller {
     public static Result boardList(){
         Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class,
                 Thankyou.class);
-        List<Thankyou> Thankyou = finder.all();
-    	return ok(boardList.render("Thankyou.thankyou_id","Thankyou.section_id","Thankyou.help_contents","Thankyou.date","Thankyou.post_id","Thankyou.vote_number"));
+        List<Thankyou> ThankyouList = finder.all();
+    	return ok(boardList.render(ThankyouList));
     }
 
     public static Result board(){
