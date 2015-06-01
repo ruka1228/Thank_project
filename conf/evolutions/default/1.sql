@@ -3,10 +3,10 @@
 
 # --- !Ups
 
-create table depertment (
+create table department (
   department_id             integer not null,
   department_name           varchar(255),
-  constraint pk_depertment primary key (department_id))
+  constraint pk_department primary key (department_id))
 ;
 
 create table login (
@@ -44,10 +44,11 @@ create table user (
   id                        bigint not null,
   name                      varchar(255),
   password                  varchar(255),
+  permission                integer,
   constraint pk_user primary key (id))
 ;
 
-create sequence depertment_seq;
+create sequence department_seq;
 
 create sequence login_seq;
 
@@ -66,7 +67,7 @@ create sequence user_seq;
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
-drop table if exists depertment;
+drop table if exists department;
 
 drop table if exists login;
 
@@ -80,7 +81,7 @@ drop table if exists user;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
-drop sequence if exists depertment_seq;
+drop sequence if exists department_seq;
 
 drop sequence if exists login_seq;
 

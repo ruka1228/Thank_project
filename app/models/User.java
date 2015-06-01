@@ -2,6 +2,7 @@ package models;
 
 import javax.persistence.*;
 import play.db.ebean.Model;
+import views.html.users.*;
 
 @Entity
 public class User extends Model {
@@ -11,6 +12,8 @@ public class User extends Model {
     public String name;
 
     public String password;
+
+    public Integer permission;
 
     public static Finder<Long, User> find = new Finder<Long,User>(
         Long.class, User.class
@@ -34,12 +37,13 @@ public class User extends Model {
         return (user != null && user.password.equals(password));
     }
 
-    public static Long create(String name, String password) {
-        User user = new User();
-        user.name = name;
-        user.password = password;
-        user.save();
-
-        return user.id;
-    }
+//    public static Long create(Long id,String name, String password) {
+//        User user = new User();
+//        //user.id = id;
+//        user.name = name;
+//        user.password = password;
+//        user.save();
+//
+//        return user.id;
+//    }
 }

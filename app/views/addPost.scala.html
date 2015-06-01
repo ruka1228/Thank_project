@@ -1,18 +1,33 @@
+@(departmentList: List[Department],departmentForm: Form[Department])
+
 <html>
-<head>
-<title>新規部署登録画面</title>
-</head>
-
-<body>
-
-<div align="center"><h1>新規部署登録画面<h1></div>
-<form action="cgi-bin/abc.cgi" method="post">
-<p>
-<div align="center">部署名：<input type="text" name="namae"></div>
-</p>
+    <body>
+        <h1>部署作成</h1>
 
 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>部署名</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(u <- departmentList) {
+                <tr>
+                    <td>@u.department_id</td>
+                    <td>@u.department_name</td>
+                </tr>
+            }
+            </tbody>
 
-<div align="center"><button><font size=4 color="black" >新規登録</font></button>
-　　　　　　　　　　<button><font size=4 color="black" >メニューに戻る</font></button>
-　　　<p></div>
+            <form action="@routes.Department_create.addPost()" method="POST">
+        <p>
+            名前: <input type="text" name="department_name" required/>
+        </p>
+
+        <input type="submit" value="Create"/>
+    </form>
+        </table>
+    </body>
+</html>
