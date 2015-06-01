@@ -1,25 +1,7 @@
-@(loginForm: Form[Authentication.Login])
+@(message: String)
 
-@import helper._
+@main("Welcome to Play") {
 
-<html>
-    <body>
-        <h1>ログインフォーム</h1>
+    @play20.welcome(message, style = "Java")
 
-        <hr>
-
-        <!-- ↓ユーザ名とパスワードの真偽をはかる -->
-        @if(loginForm.hasGlobalErrors) {
-        <p class="error">
-            @loginForm.globalError.message
-        </p>
-        }
-
-        @form(routes.Authentication.authenticate()) {
-            @inputText(loginForm("name"))
-            @inputPassword(loginForm("password"))
-
-            <input type="submit" value="ログイン">
-        }
-    </body>
-</html>
+}

@@ -10,13 +10,10 @@ import play.db.ebean.Model;
 public class Thankyou extends Model {
 
 	@ManyToOne
-	public List<User> users;
+	public List<Section> section;
 
 	@ManyToOne
-	public List<Section> sections;
-
-	@ManyToOne
-	public List<Depertment> posts;
+	public List<Depertment> post;
 
 	@Id
     public Integer thankyou_id; //感謝カードID
