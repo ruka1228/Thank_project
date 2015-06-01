@@ -1,4 +1,4 @@
-@(thankscardID:String,class:String,date:integer,content:String)
+@(thanklist:List[Thankyou])
 <html>
 <head>
 <title>掲示板画面</title>
@@ -25,7 +25,7 @@
 
  	<tr>
  	<td colspan=1>内容:@Thankyou.help_contents</td><td>
- 	 <FORM ACTION='@routes.Apprication.boardselect()' METHOD='POST'>
+ 	 <FORM ACTION='routes.Apprication.boardselect()' METHOD='POST'>
  	<INPUT TYPE='hidden' NAME='thankyou_id' VALUE=@Thankyou.thankyou_id>
  	<INPUT TYPE='submit' VALUE='詳細'>
  	</td>
@@ -36,9 +36,9 @@
 
 <td align="right" valign="bottom">
  <button>最新</button>
- <a href="@routes.Application.send()"><button>送信<br>済み</button></a>
- <a href="@routes.Application.receive()"><button>受信</button></a>
- <a href="@routes.Application.staffMenu()"><button>メニュー<br>戻る</button></a></td>
+ <a href="routes.Application.send()"><button>送信<br>済み</button></a>
+ <a href="routes.Application.receive()"><button>受信</button></a>
+ <a href="routes.Application.staffMenu()"><button>メニュー<br>戻る</button></a></td>
 </table>
 
 

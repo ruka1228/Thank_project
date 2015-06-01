@@ -32,7 +32,7 @@ public class Application extends Controller {
     		return redirect(routes.Application.boardList());
     	}else{
             Thankyou thankyou =finder.byId(thankyou_id);
-            return ok(board.render(Thankyou));
+            return ok(board.render(thankyou.thankyou_id,thankyou.section_id,thankyou.help_contents,thankyou.date,thankyou_post_id,thankyou.vote_number));
     	}
     }
 
