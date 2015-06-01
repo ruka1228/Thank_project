@@ -1,4 +1,4 @@
-@(year:Date,month:Date,votes:Integer,data:Date,thankscardID:Integer,class:String,date:Date)
+@(search_year:Date,search_month:Date,search_votes:Integer,search_data:Date,search_thankscardID:Integer,search_class:String,search_date:Date)
 <HTML>
 <HEAD>
 </HEAD>
@@ -7,21 +7,21 @@
 </br>
 <form>
 
-日付(年)@year
+日付(年)@search_year
 <select>
 <option>
 </option>
 </select>
 </br>
 
-日付(月)@month
+日付(月)@search_month
 <select>
 <option>
 </option>
 </select>
 </br>
 
-得票数@votes
+得票数@search_votes
 <select>
 <option>
 </option>
@@ -31,11 +31,11 @@
 <label>@data :件のデータがあります。
 </br>
 
-感謝カードID：@thankscardID
+感謝カードID：@search_thankscardID
 
-種別：@class
+種別：@search_class
 
-日付：@date
+日付：@search_date
 </label>
 <input type="button" value="詳細">
  @data:件のデータがあります。
