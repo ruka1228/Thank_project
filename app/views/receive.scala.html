@@ -1,4 +1,4 @@
-@(thankscardID:Stirng,class:String,date:Date,content:Stirng)
+@(receive_thankscardID:Stirng,receive_class:String,receive_date:Date,receive_content:Stirng)
 
 <html>
 <head>
@@ -10,8 +10,8 @@
 <div align="center"><tr><th>○件のデータがあります。</th></div>
 
 <div align="center"><table border=1></div>
-  <tr><th>感謝カードID:@thankscardID</th><th>種別:@class</th><th>日付:@date</th>
-  <tr><th colspan=1>内容:@content<button>詳細</button></th>
+  <tr><th>感謝カードID:@receive_thankscardID</th><th>種別:@receive_class</th><th>日付:@receive_date</th>
+  <tr><th colspan=1>内容:@receive_content<button>詳細</button></th>
 
   <td align="left" valign="bottom">
    <a href="@routes.Application.staffMenu()"><button>メニュー<br>戻る</button></a></td>

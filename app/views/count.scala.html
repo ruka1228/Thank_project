@@ -1,4 +1,4 @@
-@(employeeID:Integer,year:Date,month:Date,help:Integer,vote:Integer,thankscardID:Integer,class:String,date:Date,content:String)
+@(count_employeeID:Integer,count_year:Date,count_month:Date,count_help:Integer,count_vote:Integer,count_thankscardID:Integer,count_class:String,count_date:Date,count_content:String)
 <HTML>
 
 <head>
@@ -10,7 +10,7 @@
 
 <br>
 <form>
-社員ID@employeeID
+社員ID@count_employeeID
 <select>
 
 <option>
@@ -19,7 +19,7 @@
 </form>
 
 <br>
-日付(年)@year
+日付(年)@count_year
 <select>
 
 <option>
@@ -28,7 +28,7 @@
 </form>
 
 <br>
-日付(月)@month
+日付(月)@count_month
 <select>
 <option>
 </option>
@@ -36,22 +36,22 @@
 </form>
 
 <br>
-ヘルプ数：@help
+ヘルプ数：@count_help
 
 <br>
-投票数：<br>@vote
+投票数：<br>@count_vote
 
 
 
 
 <br>
-感謝カードID：@thankscardID
+感謝カードID：@count_thankscardID
 <br>
-種別:@help
+種別:@count_class
 <br>
-日付:@date
+日付:@count_date
 <br>
-内容:<br>@content
+内容:<br>@count_content
 
 
 
