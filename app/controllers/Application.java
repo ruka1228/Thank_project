@@ -7,6 +7,9 @@ import views.html.*;
 
 public class Application extends Controller {
 
+	public static Finder<Integer, Thankyou> finder =
+			new Finder<Integer,Thankyou>(Integer.class, Thankyou.class);
+
     public static Result staffMenu(){
     	return ok(staffMenu.render());
     }
@@ -20,24 +23,16 @@ public class Application extends Controller {
     }
 
     public static Result boardList(){
-        Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class,
-                Thankyou.class);
         List<Thankyou> ThankyouList = finder.all();
     	return ok(boardList.render(ThankyouList));
     }
-
-    public static Result board(){
-
-    	}
-
 
     public static Result boardselect(){
     	if(Thankyou.thankyou_id==0){
     		return redirect(routes.Application.boardList());
     	}else{
-        Finder<Integer,Thankyou> finder = new Finder<Integer,Thankyou>(Integer.class,Thankyou.class);
-        Thankyou<Thankyou> thankyou=finder.byId(new Integer(Thankyou.thankyou_id));
-    	return ok(board.render(thankyou);
+            Thankyou thankyou =finder.byId(thankyou_id);
+            return ok(board.render(Thankyou));
     	}
     }
 
@@ -50,7 +45,6 @@ public class Application extends Controller {
     }
 
     public static Result userManage(){
-    	return ok(useManage.render());
     	return ok(userManage.render());
     }
 

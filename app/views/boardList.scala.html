@@ -9,9 +9,28 @@
 <div align="center"><table border=1></div>
 
    @for(Thankyou <- thanklist) {
-	<tr><th>感謝カードID:@Thankyou.Thankyou_id</th><th>種別:@Thankyou.section_id</th><th>日付:@Thankyou.date</th>
- 	<tr><td colspan=1>内容:@Thankyou.help_contents</td><td>
- 	<button>詳細</button></td></tr>
+	<tr>
+
+	<th>
+	感謝カードID:@Thankyou.thankyou_id
+	</th>
+
+	<th>
+	種別:@Thankyou.section_id
+	</th>
+
+	<th>
+	日付:@Thankyou.date
+	</th>
+
+ 	<tr>
+ 	<td colspan=1>内容:@Thankyou.help_contents</td><td>
+ 	 <FORM ACTION='@routes.Apprication.boardselect()' METHOD='POST'>
+ 	<INPUT TYPE='hidden' NAME='thankyou_id' VALUE=@Thankyou.thankyou_id>
+ 	<INPUT TYPE='submit' VALUE='詳細'>
+ 	</td>
+ 	</tr>
+ 	</form>
 	}
 
 
