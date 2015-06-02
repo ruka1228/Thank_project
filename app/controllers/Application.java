@@ -31,6 +31,10 @@ public class Application extends Controller {
 //		return ok(thanksEntry.render());
 //	}
 
+	public static Result receive(){
+	List<Thankyou> ThankyouList = Thankyou.finder.where().eq("you_name","田中太郎").findList();
+	return ok(reveive.render(ThankyouList));
+	}
 
 
 
@@ -50,13 +54,13 @@ public class Application extends Controller {
 		}
 	}
 
+
+
 //	public static Result send(){
 //		return ok(send.render());
 //	}
 //
-//	public static Result receive(){
-//		return ok(receive.render());
-//	}
+
 //
 //	public static Result userManage(){
 //		return ok(userManage.render());

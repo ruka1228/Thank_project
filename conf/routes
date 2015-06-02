@@ -16,7 +16,7 @@
 GET     /boardlist                        controllers.Application.boardList()
 POST    /board                          controllers.Application.board()
 #GET     /send                            controllers.Application.send()
-#GET     /receive                         controllers.Application.receive()
+GET     /receive                         controllers.Application.receive()
 #GET     /userManage                      controllers.Application.userManage()
 #GET     /postManage                      controllers.Application.postManage()
 #GET     /addUser                         controllers.Application.addUser()
