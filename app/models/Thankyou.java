@@ -9,11 +9,7 @@ import play.db.ebean.Model;
 @Entity
 public class Thankyou extends Model {
 
-<<<<<<< HEAD
-=======
-//	@ManyToOne
-//	public List<User> users;
->>>>>>> refs/heads/ruka
+
 
 	@Id
     public Integer thankyou_id; //感謝カードID
