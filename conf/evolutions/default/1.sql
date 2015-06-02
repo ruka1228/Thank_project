@@ -3,10 +3,10 @@
 
 # --- !Ups
 
-create table depertment (
+create table department (
   department_id             integer not null,
   department_name           varchar(255),
-  constraint pk_depertment primary key (department_id))
+  constraint pk_department primary key (department_id))
 ;
 
 create table login (
@@ -32,22 +32,19 @@ create table thankyou (
   date                      timestamp,
   section_id                varchar(255),
   you_name                  varchar(255),
-  employee_number           varchar(255),
-  vote_number               integer,
   help_contents             varchar(255),
-  check_id                  integer,
   constraint pk_thankyou primary key (thankyou_id))
 ;
 
 create table user (
-  empoyee_id                integer not null,
+  id                Long not null,
   name                      varchar(255),
-  permission_id             integer,
-  vote_id                   integer,
-  constraint pk_user primary key (empoyee_id))
+  password                  varchar(255),
+  permission                integer,
+  constraint pk_user primary key (id))
 ;
 
-create sequence depertment_seq;
+create sequence department_seq;
 
 create sequence login_seq;
 
@@ -66,7 +63,7 @@ create sequence user_seq;
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
-drop table if exists depertment;
+drop table if exists department;
 
 drop table if exists login;
 
@@ -80,7 +77,7 @@ drop table if exists user;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
-drop sequence if exists depertment_seq;
+drop sequence if exists department_seq;
 
 drop sequence if exists login_seq;
 

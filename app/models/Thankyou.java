@@ -10,6 +10,7 @@ import play.db.ebean.Model;
 public class Thankyou extends Model {
 
 
+
 	@Id
     public Integer thankyou_id; //感謝カードID
 
@@ -19,7 +20,7 @@ public class Thankyou extends Model {
 
     public String you_name; //相手の氏名
 
-    public String employee_number; //社員ID
+    //public String employee_number; //社員ID
 
     public Integer post_id; //部署ID
 
@@ -36,3 +37,4 @@ public class Thankyou extends Model {
      }
 
 }
+

@@ -1,5 +1,4 @@
-@(count_employeeID:Integer,count_year:Date,count_month:Date,count_help:Integer,count_vote:Integer,count_thankscardID:Integer,count_class:String,count_date:Date,count_content:String)
-<HTML>
+
 
 <head>
 
@@ -10,7 +9,7 @@
 
 <br>
 <form>
-社員ID@count_employeeID
+社員ID
 <select>
 
 <option>
@@ -19,7 +18,7 @@
 </form>
 
 <br>
-日付(年)@count_year
+日付(年)
 <select>
 
 <option>
@@ -28,7 +27,7 @@
 </form>
 
 <br>
-日付(月)@count_month
+日付(月)
 <select>
 <option>
 </option>
@@ -36,26 +35,22 @@
 </form>
 
 <br>
-ヘルプ数：@count_help
+ヘルプ数：
 
 <br>
-投票数：<br>@count_vote
+投票数：<br>
 
 
 
 
 <br>
-感謝カードID：@count_thankscardID
+感謝カードID：
 <br>
-種別:@count_class
+種別:
 <br>
-日付:@count_date
+日付:
 <br>
-内容:<br>@count_content
-
+内容:<br>
 
 
 <input type="button" value="詳細">
-<a href="@routes.Application.adminMenu()"><input type="button" value="メニューに戻る"></a>
-</body>
-</HTML>

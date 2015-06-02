@@ -6,8 +6,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Section extends Model {
-	@OneToMany
-	public List<Thankyou> Thanks;
 
 	@Id//←ここでIDを主キーに設定している
     public Integer section_id; //種別ID
