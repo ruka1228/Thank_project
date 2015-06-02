@@ -32,8 +32,8 @@ public class Application extends Controller {
 //	}
 
 	public static Result receive(){
-	List<Thankyou> ThankyouList = Thankyou.finder.where().eq("you_name","田中太郎").findList();
-	return ok(reveive.render(ThankyouList));
+	List<Thankyou> receiveList = Thankyou.finder.where().eq("you_name","田中太郎").findList();
+	return ok(receive.render(receiveList));
 	}
 
 
