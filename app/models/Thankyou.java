@@ -28,10 +28,10 @@ public class Thankyou extends Model {
 
     public Integer check_id; //チェック判定
 
-    public static Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class, Thankyou.class);
+    public static Finder<Integer,Thankyou> find = new Finder<Integer, Thankyou>(Integer.class, Thankyou.class);
 
     public static List<Thankyou> all() {
-         return finder.all();
+         return find.all();
      }
 
 }

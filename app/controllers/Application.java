@@ -2,8 +2,12 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-
+import models.Thankyou;
 import views.html.*;
+import java.util.*;
+import play.data.Form;
+import play.data.DynamicForm;
+import views.*;
 
 public class Application extends Controller {
 
@@ -28,8 +32,8 @@ public class Application extends Controller {
 //    }
 
     public static Result boardList(){
-    	List<Thankyou> ThankyouList = Thankyou.all();
-    		return ok(boardList.render(ThankyouList));
+    	List<Thankyou> ThankList = Thankyou.all();
+    		return ok(boardList.render(ThankList));
     }
 
     public static Result board(){
@@ -38,7 +42,7 @@ public class Application extends Controller {
      	        input = input.bindFromRequest(params);
      	        String name = input.data().get("thankid");
      	        int select =Integer.parseInt(name);
-     	        Thankyou thankyou =Thankyou.finder.byId(select);
+     	        Thankyou thankyou =Thankyou.find.byId(select);
      			return ok(board.render(thankyou));
     }
 
@@ -47,7 +51,7 @@ public class Application extends Controller {
 //    }
 
     public static Result receive(){
-    		List<Thankyou> receiveList = Thankyou.finder.where().eq("you_name","田中太郎").findList();
+    		List<Thankyou> receiveList = Thankyou.find.where().eq("you_name","田中太郎").findList();
     		return ok(receive.render(receiveList));
     }
 
