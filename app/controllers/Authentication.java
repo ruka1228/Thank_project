@@ -38,7 +38,7 @@ public class Authentication extends Controller {
         session().clear();
         return redirect(routes.Authentication.index());
     }
-
+//
     //認証に失敗していればログインフォーム再表示
     //認証に成功いていればユーザ名を表示
     public static Result authenticate() {
