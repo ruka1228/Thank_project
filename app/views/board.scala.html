@@ -1,4 +1,4 @@
-@(board_thankscardID:String,board_class:String,board_content:String,board_date:Date,board_post:String,board_vote:Integer)
+@(thankyou:Thankyou)
 <html>
 <head>
 <title>掲示板詳細画面</title>
@@ -14,25 +14,32 @@
 		<table border=1>
 			</div>
 			<tr>
-				<th>感謝カードID:@board_thankscardID</th>
-				<th>種別:@board_class</th>
+				<th>感謝カードID:@thankyou.thankyou_id</th>
+				<th>種別:@thankyou.section_id</th>
 			<tr>
-				<td colspan=1>内容:@board_content</td>
+				<td>日付:@thankyou.date</td>
+				<td>部署:@thankyou.post_id</td>
 			</tr>
 			<tr>
-				<td>日付:@board_date</td>
-				<td>部署:@board_post</td>
+				<td colspan=2>内容:@thankyou.help_contents</td>
 			</tr>
+
 			<tr>
-				<td>投票数:@board_vote</td>
+				<td colspan=2>得票数:@thankyou.vote_number</td>
 			</tr>
 
 
-			<td align="left" valign="bottom">
-			<a href="routes.Application.boardlist()"><button>
-						掲示板に<br>戻る
-					</button></a> <a href="routes.Application.staffMenu()"><button>
-						メニューに<br>戻る
-					</button></a></td>
+			<td align="right" valign="bottom"colspan=2>
+
+			<a href="@routes.Application.boardList()">
+			<button>掲示板に<br>戻る</button>
+			</a>
+
+			<a href="routes.Application.staffMenu()">
+			<button>メニューに<br>戻る</button>
+			</a>
+
+
+			</td>
 </body>
 </html>

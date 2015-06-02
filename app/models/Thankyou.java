@@ -3,17 +3,12 @@ package models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
-
+import java.util.List;
 import play.db.ebean.Model;
 
 @Entity
 public class Thankyou extends Model {
 
-	@ManyToOne
-	public List<Section> section;
-
-	@ManyToOne
-	public List<Depertment> post;
 
 	@Id
     public Integer thankyou_id; //感謝カードID
@@ -33,4 +28,11 @@ public class Thankyou extends Model {
     public String help_contents; //ヘルプ内容
 
     public Integer check_id; //チェック判定
+
+    public static Finder<Integer,Thankyou> finder = new Finder<Integer, Thankyou>(Integer.class, Thankyou.class);
+
+    public static List<Thankyou> all() {
+         return finder.all();
+     }
+
 }
