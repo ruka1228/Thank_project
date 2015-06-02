@@ -6,15 +6,37 @@
 <body>
 <center>
 <h1>メニュー</h1>
+<hr>
 
-<p><input type="button" onclick="location.href='/thanksEntry'"value="感謝カード記入" /></p>
-<p><input type="button" onclick="location.href='/users'"value="ユーザ管理" /></p>
+<p>
+<button type="button" onclick="location.href='/thanksEntry'"style="background-color:peachpuff;width:200px;height:28px;"
+onmouseover="this.style.background='lightskyblue'"
+onmouseout="this.style.background='peachpuff'"><font size="4">感謝カード記入</font></button>
+</p>
+
+<p>
+<button type="button" onclick="location.href='/users'"style="background-color:peachpuff;width:200px;height:28px;"
+onmouseover="this.style.background='lightskyblue'"
+onmouseout="this.style.background='peachpuff'"><font size="4">ユーザ登録</font></button>
+</p>
+
 <p><button><font size=4 color="black" >掲示板</font></button></p>
-<p><button><font size=4 color="black" >部署管理</font></button></p>
-<p><button><font size=4 color="black" >投票</font></button></p>
+
+<p>
+<button type="button" onclick="location.href='/addPost'"style="background-color:peachpuff;width:200px;height:28px;"
+onmouseover="this.style.background='lightskyblue'"
+onmouseout="this.style.background='peachpuff'"><font size="4">部署管理</font></button>
+</p>
+
 <p><button><font size=4 color="black" >掲示板への登録</font></button></p>
 <p><button><font size=4 color="black" >検索</font></button></p>
-<p><button><font size=4 color="black" >集計</font></button></p>
+
+<p>
+<button type="button" onclick="location.href='@routes.Authentication.logout()'"style="background-color:peachpuff;width:200px;height:28px;"
+onmouseover="this.style.background='lightskyblue'"
+onmouseout="this.style.background='peachpuff'"><font size="4">ログアウト</font></button>
+</p>
+
 </center>
 </body>
 </html>

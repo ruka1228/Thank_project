@@ -1,10 +1,13 @@
 @(departmentList: List[Department],departmentForm: Form[Department])
 
 <html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+</head>
     <body>
         <h1>部署作成</h1>
 
-
+<hr>
         <table>
             <thead>
                 <tr>
@@ -20,7 +23,6 @@
                 </tr>
             }
             </tbody>
-
             <form action="@routes.Department_create.addPost()" method="POST">
         <p>
             名前: <input type="text" name="department_name" required/>
@@ -29,9 +31,10 @@
         <input type="submit" value="Create"/>
     </form>
         </table>
-
 <p>
-        <input type="button" onclick="location.href='/adminMenu'"value="メニューに戻る">
+<button type="button" onclick="location.href='/adminMenu'"style="border-width:4;background-color:#ccccff;width:200px;height:40px;"
+onmouseover="this.style.background='lightskyblue'"
+onmouseout="this.style.background='#ccccff'"><font size="4">メニューに戻る</font></button>
 </p>
     </body>
 </html>
