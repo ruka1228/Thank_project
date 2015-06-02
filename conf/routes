@@ -12,7 +12,7 @@ GET     /logout      controllers.Authentication.logout()
 GET     /users            controllers.Users.index()
 POST    /users            controllers.Users.createUser()
 
-GET     /staffMenu                       controllers.Application.staffMenu()
+#GET     /staffMenu                       controllers.Application.staffMenu()
 GET     /adminMenu                       controllers.Application.adminMenu()
 
 #感謝カード記入
@@ -27,8 +27,8 @@ GET     /receive                           controllers.Application.receive()
 #GET     /postManage                           controllers.Application.postManage()
 
 #部署登録
-#GET    /addPost                           controllers.Department_create.addPost()
-#POST    /addPost                           controllers.Department_create.createDepartment()
+GET    /addPost                           controllers.Department_create.addPost()
+POST    /addPost                           controllers.Department_create.createDepartment()
 
 #種別登録
 #POST    /addClass                           controllers.Application.addClass()

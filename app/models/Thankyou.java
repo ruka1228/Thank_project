@@ -36,7 +36,3 @@ public class Thankyou extends Model {
 
 }
 
-    public static Finder<Integer, Thankyou> find = new Finder<Integer,Thankyou>(
-    		Integer.class, Thankyou.class
-        );
-}
