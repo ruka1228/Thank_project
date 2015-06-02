@@ -20,28 +20,27 @@ GET     /thanksEntry                     controllers.Thank_create.thanksEntry()
 POST    /thanksEntry                     controllers.Thank_create.createThank()
 
 GET     /boardList                       controllers.Application.boardList()
-GET     /board                           controllers.Application.board()
-GET     /send                           controllers.Application.send()
+POST     /board                           controllers.Application.board()
+#GET     /send                           controllers.Application.send()
 GET     /receive                           controllers.Application.receive()
-GET     /userManage                           controllers.Application.userManage()
-GET     /postManage                           controllers.Application.postManage()
-#POST    /addUser                          controllers.Application.addUser()
+#GET     /userManage                           controllers.Application.userManage()
+#GET     /postManage                           controllers.Application.postManage()
 
 #部署登録
-GET    /addPost                           controllers.Department_create.addPost()
-POST    /addPost                           controllers.Department_create.createDepartment()
+#GET    /addPost                           controllers.Department_create.addPost()
+#POST    /addPost                           controllers.Department_create.createDepartment()
 
 #種別登録
 #POST    /addClass                           controllers.Application.addClass()
 
 #POST    /addcheck                           controllers.Application.addcheck()
-GET     /deleteUser                           controllers.Application.deleteUser()
-GET     /deletePost                           controllers.Application.deletePost()
-GET     /deleteClass                           controllers.Application.deleteClass()
-GET     /vote                           controllers.Application.vote()
-GET     /search                           controllers.Application.search()
-GET     /count                           controllers.Application.count()
-GET     /check                           controllers.Application.check()
+#GET     /deleteUser                           controllers.Application.deleteUser()
+#GET     /deletePost                           controllers.Application.deletePost()
+#GET     /deleteClass                           controllers.Application.deleteClass()
+#GET     /vote                           controllers.Application.vote()
+#GET     /search                           controllers.Application.search()
+#GET     /count                           controllers.Application.count()
+#GET     /check                           controllers.Application.check()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

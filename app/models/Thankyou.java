@@ -20,8 +20,6 @@ public class Thankyou extends Model {
 
     public String you_name; //相手の氏名
 
-    //public String employee_number; //社員ID
-
     public Integer post_id; //部署ID
 
     public Integer vote_number; //投票数
@@ -38,3 +36,7 @@ public class Thankyou extends Model {
 
 }
 
+    public static Finder<Integer, Thankyou> find = new Finder<Integer,Thankyou>(
+    		Integer.class, Thankyou.class
+        );
+}
