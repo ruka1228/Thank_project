@@ -33,10 +33,7 @@ create table thankyou (
   date                      timestamp,
   section_id                varchar(255),
   you_name                  varchar(255),
-  employee_number           varchar(255),
-  vote_number               integer,
   help_contents             varchar(255),
-  check_id                  integer,
   constraint pk_thankyou primary key (thankyou_id))
 ;
 

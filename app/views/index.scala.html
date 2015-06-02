@@ -3,6 +3,9 @@
 @import helper._
 
 <html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+</head>
     <body>
         <h1>ログインフォーム</h1>
 
@@ -16,10 +19,11 @@
         }
 
         @form(routes.Authentication.authenticate()) {
-            @inputText(loginForm("name"))
-            @inputPassword(loginForm("password"))
+            @inputText(loginForm("name"), '_label -> "名前")
+            @inputPassword(loginForm("password"), '_label -> "パスワード")
 
             <input type="submit" value="ログイン">
         }
+
     </body>
 </html>

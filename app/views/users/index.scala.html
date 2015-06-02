@@ -1,0 +1,50 @@
+@(userList: List[User],userForm: Form[User])
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+</head>
+    <body>
+        <h1>ユーザ登録</h1>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ユーザ名</th>
+                    <th>パスワード</th>
+                    <th>権限</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(u <- userList) {
+                <tr>
+                    <td>@u.id</td>
+                    <td>@u.name</td>
+                    <td>@u.password</td>
+                    <td>@u.permission</td>
+                </tr>
+            }
+            </tbody>
+
+            <form action="@routes.Users.createUser()" method="POST">
+        <p>
+            名前: <input type="text" name="name" required/>
+        </p>
+
+        <p>
+           パスワード : <input type="text" name="password" required/>
+        </p>
+
+        <p>
+           権限 : <input type="text" name="permission" required/>
+        </p>
+
+        <input type="submit" value="登録"/>
+        </br>
+    </form>
+    </br>
+        </table>
+    </body>
+</html>

@@ -1,81 +1,52 @@
-@(year:Integer,month:Integer,date:Integer,
-helperName:String,helpClass:String,post:String,
-helpContent:String)
+@(thankyouList: List[Thankyou],thankyouForm: Form[Thankyou])
 
-
-
+<html>
 <head>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 </head>
-<body>
 
-  <h1>感謝カード入力画面</h1>
-<form>
-年@year
-<select>
-<option>
-</option>
-</select>
-</form>
+    <body>
+        <h1>感謝カード記入</h1>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>相手の名前</th>
+                    <th>部署名</th>
+                    <th>ヘルプ内容</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(u <- thankyouList) {
+                <tr>
+                    <td>@u.thankyou_id</td>
+                    <td>@u.date</td>
+                    <td>@u.you_name</td>
+                    <td>@u.help_contents</td>
+                </tr>
+            }
+            </tbody>
 
-<form>
-月@month
-  <select>
-       　
-<option>
-</option>
-    </select>
-</form>
+            <form action="@routes.Thank_create.createThank()" method="POST">
+        <p>
+            相手の名前: <input type="text" name="you_name" required/>
+        </p>
 
-日@date
-<select>
-<option>
-</option>
-</select>
-</form>
-<br>
-<label>相手の氏名@helperName
-<input type="text" name="相手の氏名"　value="" 　>
+        <p>
+          部署名 : <input type="text" name="password" required/>
+        </p>
 
+        <p>
+           ヘルプ内容 :</br>
+           <textarea rows="7" cols="55" name="help_contents" required="required"></textarea>
+        </p>
 
-<br>
-<form>
-ヘルプ種別@helpClass
-<select>
-
-
-<option>
-</option>
-</select>
-</form>
-
-
-<br>
-<form>
-部署@post
-<select>
-
-<option>
-</option>
-</select>
-</td>
-</tr>
-</form>
-<br>
-
-<td>ヘルプ内容</td>@helpContent
-<br>
-<td><textarea rows="7" cols="55" name="message">
-</textarea></td>
-
-</br>
-</tr>
-<td>
-
-<br>
-<td colspan="2">
-<input type="submit" value="送信">
-<input type="reset" value="クリア">
-<input type="button" value="メニューに戻る">
-</body>
-
+        <input type="submit" value="送信"/>
+        <input type="reset" value="クリア">
+		<input type="button" onclick="location.href='/staffMenu'"value="メニューに戻る">
+		</br>
+    </form>
+        </table>
+    </body>
+</html>

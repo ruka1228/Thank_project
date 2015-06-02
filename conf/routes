@@ -14,7 +14,11 @@ POST    /users            controllers.Users.createUser()
 
 GET     /staffMenu                       controllers.Application.staffMenu()
 GET     /adminMenu                       controllers.Application.adminMenu()
-GET     /thanksEntry                     controllers.Application.thanksEntry()
+
+#感謝カード記入
+GET     /thanksEntry                     controllers.Thank_create.thanksEntry()
+POST    /thanksEntry                     controllers.Thank_create.createThank()
+
 GET     /boardList                       controllers.Application.boardList()
 GET     /board                           controllers.Application.board()
 GET     /send                           controllers.Application.send()
@@ -27,7 +31,9 @@ GET     /postManage                           controllers.Application.postManage
 GET    /addPost                           controllers.Department_create.addPost()
 POST    /addPost                           controllers.Department_create.createDepartment()
 
+#種別登録
 #POST    /addClass                           controllers.Application.addClass()
+
 #POST    /addcheck                           controllers.Application.addcheck()
 GET     /deleteUser                           controllers.Application.deleteUser()
 GET     /deletePost                           controllers.Application.deletePost()

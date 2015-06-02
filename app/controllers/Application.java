@@ -24,9 +24,9 @@ public class Application extends Controller {
     	return ok(adminMenu.render());
     }
 
-    public static Result thanksEntry(){
-    	return ok(thanksEntry.render());
-    }
+//    public static Result thanksEntry(){
+//    	return ok(thanksEntry.render());
+//    }
 
     public static Result boardList(){
     	return ok(boardList.render());

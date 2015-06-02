@@ -1,0 +1,25 @@
+  @charset "utf-8";
+
+body{
+margin: 0px auto;
+width: 800px;
+background-image: url("../images/back_ground.jpg");
+background-repeat: repeat;
+background-attachment: fixed;
+background-position: right bottom
+}
+
+header{
+	width: 800px;
+}
+
+h1{
+	color:blue;
+}
+
+.footer{
+
+background: #0000f0;
+height: 50px;
+clear: both;
+}
