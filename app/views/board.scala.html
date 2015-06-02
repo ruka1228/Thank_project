@@ -1,21 +1,37 @@
+@(thankyou:Thankyou)
 <html>
 <head>
 <title>掲示板詳細画面</title>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 </head>
 <body>
+ <div align="center">
+  <h1>
+   掲示板詳細
+   <h1>
+ </div>
+ <div align="center">
+  <table border=1>
+   </div>
+   <tr>
+    <th>感謝カードID:@thankyou.thankyou_id</th>
+    <th>種別:@thankyou.section_id</th>
+   <tr>
+    <td>日付:@thankyou.date</td>
+   </tr>
+   <tr>
+    <td colspan=2>内容:@thankyou.help_contents</td>
+   </tr>
 
-<div align="center"><h1>掲示板詳細<h1></div>
-<div align="center"><table border=1></div>
-  <tr><th>感謝カードID:</th>　<th>種別:</th>　
-  <tr><td colspan=1>内容:</td></tr>
-　<tr><td>日付:</td><td>部署</td></tr>
-  <tr><td>投票数</td></tr>
 
+   <td align="right" valign="bottom"colspan=2>
+   <a href="@routes.Application.boardList()">
+   <button>掲示板に<br>戻る</button>
+   </a>
+   <a href="@routes.Application.adminMenu()">
+   <button>メニューに<br>戻る</button>
+   </a>
 
-<td align="left" valign="bottom">
-<button>掲示板に<br>戻る</button>
-<button>メニューに<br>戻る</button></td>
-
-
+   </td>
 </body>
 </html>

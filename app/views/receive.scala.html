@@ -1,22 +1,48 @@
-<html>
-<head>
-<title>受信箱</title>
-</head>
-<body>
+@(thanklist:List[Thankyou])
 
-<div align="center"><h1>受信箱<h1></div>
-<div align="center"><tr><th>○件のデータがあります。</th></div>
+ <html>
+ <head>
+ <title>受信箱</title>
+<link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+ </head>
+ <body>
+  <div align="center">
+   <h1>
+    受信箱
+    <h1>
+  </div>
+  <div align="center">
+   <table border=1>
+    </div>
+    <tr>
+       @for(Thankyou <- thanklist) {
+     <th>感謝カードID:@Thankyou.thankyou_id</th>
 
-<div align="center"><table border=1></div>
-  <tr><th>感謝カードID:</th>　<th>種別:</th>　<th>日付:</th>
-  <tr><th colspan=1>内容:<button>詳細</button></th>
-  
-  <td align="left" valign="bottom">
-   <button>メニュー<br>戻る</button></td>
-</table>
-</tr>
+     <th>種別:@Thankyou.section_id</th>
+
+     <th>日付:@Thankyou.date</th>
+    <tr>
+     <td colspan=3>内容:@Thankyou.help_contents</td>
+     <td>
+      <form method="post" action="/board">
+       <input type="hidden" name="thankid" value="@Thankyou.thankyou_id" />
+       <input type="submit" value="詳細" />
+      </form>
+
+     </td>
+    </tr>
+
+    }
 
 
-
-</body>
-</html>
+     <td align="right" valign="bottom" colspan=4>
+  	<a href="@routes.Application.boardList()">
+     	<button>掲示板に<br>戻る</button>
+  	</a>
+  	<a href="@routes.Application.adminMenu()">
+     	<button>メニューに<br>戻る</button>
+  	</a>
+     </td>
+   </table>
+ </body>
+ </html>
